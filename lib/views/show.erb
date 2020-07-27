@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Page potin n° <%= id %></title>
+  </head>
+
+  <body>
+    <h1>Voici la page potin n° <%= id %></h1>
+    
+    <p><br/><br/>Son auteur : <a href="/gossips/<%=id%>/edit/"><%= gossips[0].author %></a> est réputé chez THP<br/><br/><br/>
+      Le contenu du potin : <a href="/gossips/<%=id%>/edit/"><%= gossips[0].content %></a></p><br/><br/>
+
+    <p>Pour <a href="/gossips/<%=id%>/edit/"> éditer le potin et le modifier</a> il suffit de cliquer dessus</p><br/>
+    <p>Voici le lien pour revenir à la <a href="/">page des potins</a></p>
+    <p>Pour ajouter un commentaire, il faudra attendre la V2</p>
+  
+  </body>
+
+</html>

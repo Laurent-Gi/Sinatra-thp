@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Editer un potin <%=id%></title>
+  </head>
+  <body>
+    <h1>Voici l'édition de ton potin n° <%=id%> !</h1>
+
+    <p>Tu pourras donc le corriger s'il est imprécis, inexact ou carrément fake !</p>
+    
+    <p>Penses aussi à vérifier la source, est-ce bien de : <%= gossips[0].author %> ?</p>
+
+    <p>C'est important pout les droits d'auteur !<br><br></p>
+
+
+    <p>Mise à jour du potin <%= id%> via le formulaire ci-dessous</p> 
+
+      <form action='/gossips/<%=id%>/edit/' method='POST'>
+      <p>L'auteur du potion : <input type='text' name='gossip_author' value="<%= gossips[0].author %>"/></p>
+      <p>Son potin est modifiable : <input type='text' name='gossip_content' value="<%= gossips[0].content %>"/></p>
+      <input type='submit'/>
+      </form>
+
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+
+  <body>
+    <h1>Bienvenue sur l'application des potins THP !</h1>
+    
+    <p>Pour ajouter un potin, il te suffit de cliquer sur <a href="/gossips/new/">créer un potin</a></p>
+
+    <h2>Voici la liste des potins :</h2>
+
+    <% gossips.each_with_index do |gossip, index| %>
+      <p>
+        <a href="/gossips/<%=index+1%>"><%= gossip.author %> a dit : </a>
+        <a href="/gossips/<%=index+1%>"><%= gossip.content %></a>
+      </p>
+    <% end %>
+
+  
+  </body>
+
+</html>
